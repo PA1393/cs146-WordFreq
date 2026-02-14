@@ -1,25 +1,6 @@
 public class Heapify {
     
 
-   public static boolean isHeap(WordFreq[] heap, int index) {
-
-    int left = 2 * index + 1; // left child --- 0 based indexing
-    int right = 2 * index + 2; //right child --- 0 based indexing
-
-    // Check left child
-    if (left < heap.length && heap[index].frequency < heap[left].frequency) {
-        return false;
-    }
-
-    // Check right child
-    if (right < heap.length && heap[index].frequency < heap[right].frequency) {
-        return false;
-    }
-
-    return true; 
-
-    }
-
     // Fix heap property at index i by sifting down
     private static void maxHeapify(WordFreq[] a, int heapSize, int i) {
         while (true) {
@@ -28,11 +9,13 @@ public class Heapify {
 
             int largest = i; 
 
-            if (isHeap(a, left)) {
+            // compare parent with left child
+            if (left < heapSize && a[left].frequency > a[largest].frequency) {
                 largest = left;
             }
 
-            if (isHeap(a, right)) {
+            // compare current largest with right child
+            if (right < heapSize && a[right].frequency > a[largest].frequency) {
                 largest = right;
             }
 
@@ -54,9 +37,9 @@ public class Heapify {
     public static void buildMaxHeap(WordFreq[] input){
 
         int n = input.length;
-        int leafNode = (input.length/2) -1; //start heapifying from the last internal node --> the root
+        int lastInternal = (input.length/2) -1; //start heapifying from the last internal node --> the root
 
-        for(int i = leafNode ; i>=0 ; i--){
+        for(int i = lastInternal ; i>=0 ; i--){
            maxHeapify(input, n, i);
         }
     }

@@ -1,5 +1,3 @@
-
-
     /* You are given a list of commonly used customer‑survey phrases, 
     each paired with the number of times it appeared in recent feedback. */
 public class WordFreq {
@@ -18,8 +16,6 @@ public class WordFreq {
         return word + " (" + frequency + ")";
     }
 
-
-   
 
 
 }
