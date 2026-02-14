@@ -13,5 +13,10 @@ public class WordFreq {
     }
 
 
+    @Override
+    public String toString(){
+        return word + " (" + frequency + ")";
+    }
+
 
 }
