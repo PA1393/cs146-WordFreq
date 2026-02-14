@@ -2,7 +2,7 @@
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
          WordFreq[] Data = {
         
@@ -23,7 +23,8 @@ public class Main {
     System.out.println(Arrays.toString(Data));
     
     System.out.println( );
-    buildMaxHeap(Data);
+
+    Heapify.buildMaxHeap(Data);
 
     System.out.println("Max-Heap Array:");
     System.out.println(Arrays.toString(Data));

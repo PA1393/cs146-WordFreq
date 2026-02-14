@@ -1,7 +1,6 @@
-public class Heapify {
-    
 
-    // Fix heap property at index i by sifting down
+public class Heapify {
+
     private static void maxHeapify(WordFreq[] a, int heapSize, int i) {
         while (true) {
             int left = 2 * i + 1; // left child --- 0 based indexing
@@ -37,7 +36,7 @@ public class Heapify {
     public static void buildMaxHeap(WordFreq[] input){
 
         int n = input.length;
-        int lastInternal = (input.length/2) -1; //start heapifying from the last internal node --> the root
+        int lastInternal = n/2 -1; //start heapifying from the last internal node --> the root
 
         for(int i = lastInternal ; i>=0 ; i--){
            maxHeapify(input, n, i);
