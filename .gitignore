@@ -1,26 +1,7 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+*.class
+bin/
+out/
 
-# Virtual environments
-venv/
-env/
-ENV/
-
-# IDE
 .vscode/
-.idea/
-*.swp
-*.swo
 
-# OS
-.DS_Store
 Thumbs.db
-
-# Project specific
-*.log
-*.tmp
-build/
-dist/
-*.egg-info/
