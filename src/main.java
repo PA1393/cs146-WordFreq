@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
          WordFreq[] Data = {
         
         new WordFreq("happy", 400),
@@ -22,7 +23,7 @@ public class Main {
     System.out.println(Arrays.toString(Data));
     
     System.out.println( );
-    //buildMaxHeap(Data);
+    buildMaxHeap(Data);
 
     System.out.println("Max-Heap Array:");
     System.out.println(Arrays.toString(Data));

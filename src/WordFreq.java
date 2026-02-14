@@ -19,37 +19,7 @@ public class WordFreq {
     }
 
 
-     //left child = 2*index HELPER METHOD
-    public int leftChild(int index){
-        return 2*index;
-    }
-
-        //right child = 2*index + 1 HELPER METHOD
-    public int rightChild(int index){
-        return 2*index + 1;
-    }
-
-    public boolean isHeap(int index){
-        if(index >= leftChild(index) && index >= rightChild(index)){
-            return true;
-        }
-        return false;
-    }
-
-
-    //Standard bottom up heap construction method
-    public  WordFeq[] buildMaxHeap(WordFreq[] input){
-
-        for(int i = input.length-1; i>=0 ; i--){
-            if(!(isHeap(input[i].frequency))){
-                //swap index with greater child
-            }
-        }
-
-
-        //leaf node(s) = n/2
-        //node parent = index/2
-    }
+   
 
 
 }
